@@ -1,0 +1,18 @@
+<aside id="sidebar">
+
+    <header>
+        <h1>Editor's picks</h1>
+    </header>
+
+    {% for movie in selected_movies %}
+        <div id="article-container">
+            <a href="https://www.imdb.com/find?s=tt&q={{ movie.title }}" >
+                <img id="logo" src="{{movie.image_hyperlink}}" onerror="this.src = ('/static', filename='Movie.png')" />
+            </a>
+            <div id="article-description">
+                <p>{{ movie.title }}, ({{ movie.date }}).</p>
+                <p>{{ movie.description }}.</p>
+            </div>
+        </div>
+    {% endfor %}
+</aside>

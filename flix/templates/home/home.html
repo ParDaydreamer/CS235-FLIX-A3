@@ -1,0 +1,36 @@
+{% extends 'layout.html' %} {% block content %}
+<main id="main">
+    <img id="home" src="static/bamboo forest.jpg"/>
+    <p>&nbsp</p>
+
+    <p>
+        Enjoy the movies from CS235 Flix, courtesy of the <b>School of Computer Science </b>in<b> University of Auckland</b>.
+        Feel free to browse our inventory and don't fotget to leave your reviews!
+    </p>
+    <p>By Gary Zou</p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <header>
+        <h1>Editor's Pick</h1>
+    </header>
+    {% for movie in home_movies %}
+        <div id="movie-container">
+            <a href="https://www.imdb.com/find?s=tt&q={{ movie.title }}" >
+
+                <img id="logo" src="{{movie.image_hyperlink}}" onerror="this.src = ('static', filename='Movie.png')" />
+            </a>
+            <div id="movie-description">
+                <p>{{ movie.title }}, ({{ movie.date }}).</p>
+                <p>{{ movie.description }}.</p>
+            </div>
+        </div>
+    {% endfor %}
+  <p style="text-align: right; font-style: italic;">
+
+  </p>
+</main>
+{% endblock %}

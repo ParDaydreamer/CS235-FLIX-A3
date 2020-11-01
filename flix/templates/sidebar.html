@@ -1,0 +1,23 @@
+<sidebar id="sidebar">
+
+
+  <div class="slider" id="slider">
+    <h3 id="sub-nav-header">Browse by actors</h3>
+    {% for key in actor_urls %}
+      <a class="btn-nav" href="{{ actor_urls[key] }}">{{ key }}</a>
+    {% endfor %}
+  </div>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+
+  <div class="slider2" id="slider2">
+    <h3 id="sub-nav-header">Browse by directors</h3>
+    {% for key in actor_urls %}
+      <a class="btn-nav" href="{{ director_urls[key] }}">{{ key }}</a>
+    {% endfor %}
+  </div>
+
+
+
+</sidebar>
